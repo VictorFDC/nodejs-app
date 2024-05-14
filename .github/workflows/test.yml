@@ -1,0 +1,22 @@
+name : test
+on:
+  push:
+      branches:
+      - "main"
+
+jobs:
+    test_ads:
+      runs-on: ubuntu-20.04
+      steps:
+          - name: show message
+            run: echo "Hello world"
+
+          - name: Show secret
+            run: echo ${{secretS.ENVIROMENT}}
+           
+          - name: show variable in file
+            run: echo${{env.USER_REPOSITORY}}
+           
+          - name: show variable GITHUB
+            run: echo${{vars.VERSION}}  
+            
